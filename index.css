@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  
+  body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+    overflow-x: hidden;
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Smooth custom scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F1F5F9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF5500;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 bg-mechnik-500 hover:bg-mechnik-600 text-white shadow-mechnik-sm hover:shadow-mechnik active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 hover:border-slate-300 shadow-sm active:scale-[0.98] disabled:opacity-50;
+  }
+
+  .btn-dark {
+    @apply inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 bg-charcoal-900 hover:bg-charcoal-800 text-white shadow-sm active:scale-[0.98] disabled:opacity-50;
+  }
+
+  .card-hover {
+    @apply transition-all duration-200 hover:-translate-y-1 hover:shadow-soft-lg;
+  }
+}
+
+/* Subtle decorative patterns */
+.mechnik-grid-bg {
+  background-image: radial-gradient(rgba(255, 85, 0, 0.06) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
